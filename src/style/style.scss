@@ -1,11 +1,17 @@
 @import"_normalize";
 @import"_webfonts";
 @import"_variables";
-@import"_layout";
+@import"_hero";
 @import"_header";
 @import"_footer";
 @import"_speaker";
 
-body {
-  margin: 2rem;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
 }

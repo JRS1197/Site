@@ -1,33 +1,56 @@
 
 .header {
+  margin: 2rem;
+  font-family: maven;
   display: flex;
   ul {
     list-style: none;
     padding: 0;
   }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
   &__logo {
-    border: solid;
+    //border: solid;
     h1 {
       font-size: 0;
     }
   }
   &__navbar {
-    border: solid red;
+    //border: solid red;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     width: 100%;
   }
   &__navbar-list {
-    border: solid purple;
+    //border: solid purple;
     display: flex;
-    
+    a {
+      display: flex;
+      align-items: center;
+    }
+    li a::before {
+      height: 1rem;
+      border-left: 2px solid #000;
+      content: "";
+      margin: 0 1rem;
+      color: rgb(0, 0, 0);
+    }
+    li:first-child a::before {
+      border-left: 0px  solid #000;
+    }
   }
   &__navbar-schedule {
-    border: solid green;
+    align-items: center;
+   
+  }
+  &_schedule-icon {
+    
   }
   &__navbar-search {
-    border: solid blue;
+    color: red;
   }
 }

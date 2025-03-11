@@ -1,4 +1,170 @@
+@font-face {
+  font-family: "spartan";
+  src: url(../fonts/LeagueSpartanVariable.woff2);
+}
+@font-face {
+  font-family: "maven";
+  src: url(../fonts/MavenPro-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "museo300";
+  src: url(../fonts/museo300.woff);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "museo500";
+  src: url(../fonts/museo500.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "museo700";
+  src: url(../fonts/museo700.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "codeconf";
+  src: url(../fonts/codeconf.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class*=icon]::before, [class$=" icon"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "codeconf" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-burger::before {
+  content: "\e93e";
+}
+
+.icon-schedule:before {
+  content: "\e93f";
+}
+
+.icon-loop:before {
+  content: "\e940";
+}
+
+.icon-contact:before {
+  content: "\e941";
+}
+
+.icon-event:before {
+  content: "\e942";
+}
+
+.icon-home:before {
+  content: "\e943";
+}
+
+.icon-card:before {
+  content: "\e944";
+}
+
+.icon-paypal:before {
+  content: "\e945";
+}
+
+.icon-tw:before {
+  content: "\e946";
+}
+
+.icon-slack:before {
+  content: "\e947";
+}
+
+.icon-heart_full:before {
+  content: "\e948";
+}
+
+.icon-heart_line:before {
+  content: "\e949";
+}
+
+.icon-square_full:before {
+  content: "\e94a";
+}
+
+.icon-square_line:before {
+  content: "\e94b";
+}
+
+.icon-spade_full:before {
+  content: "\e94c";
+}
+
+.icon-spade_line:before {
+  content: "\e94d";
+}
+
+.icon-clover_full:before {
+  content: "\e94e";
+}
+
+.icon-clover_line:before {
+  content: "\e94f";
+}
+
+.hero {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(106, 0, 212)), color-stop(50%, rgb(161, 65, 255)), to(rgb(106, 0, 212)));
+  background: linear-gradient(90deg, rgb(106, 0, 212) 0%, rgb(161, 65, 255) 50%, rgb(106, 0, 212) 100%);
+}
+.hero__pattern {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hero__pattern_right {
+  margin-top: -18px;
+  width: 20%;
+}
+.hero__pattern_left {
+  margin-top: -18px;
+  width: 10%;
+}
+.hero__presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__presentation_img {
+  margin-top: -70px;
+  height: 200px;
+}
+.hero__presentation_text h1 {
+  font-family: museo500;
+  color: white;
+  margin-bottom: 0px;
+}
+.hero__presentation_text p {
+  font-family: maven;
+  color: white;
+  margin-top: 10px;
+}
+
 .header {
+  margin: 2rem;
+  font-family: maven;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,14 +173,14 @@
   list-style: none;
   padding: 0;
 }
-.header__logo {
-  border: solid;
+.header a {
+  text-decoration: none;
+  color: #000;
 }
 .header__logo h1 {
   font-size: 0;
 }
 .header__navbar {
-  border: solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,22 +190,48 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
 }
 .header__navbar-list {
-  border: solid purple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+.header__navbar-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__navbar-list li a::before {
+  height: 1rem;
+  border-left: 2px solid #000;
+  content: "";
+  margin: 0 1rem;
+  color: rgb(0, 0, 0);
+}
+.header__navbar-list li:first-child a::before {
+  border-left: 0px solid #000;
+}
 .header__navbar-schedule {
-  border: solid green;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__navbar-search {
-  border: solid blue;
+  color: red;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  margin: 2rem;
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */

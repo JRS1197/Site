@@ -1,0 +1,41 @@
+.hero {
+width: 100%;
+background: linear-gradient(90deg, rgba(106,0,212,1) 0%, rgba(161,65,255,1) 50%, rgba(106,0,212,1) 100%);
+//border: solid;
+  &__pattern{
+    display: flex;
+    justify-content: space-between;
+    &_right{
+      margin-top: -18px;
+      //border: solid red;
+      width: 20%;
+    }
+    &_left{
+      margin-top: -18px;
+      //border: solid green;
+      width: 10%;
+    }
+  }
+  &__presentation{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    &_img{
+      margin-top: -70px;
+      height: 200px;
+    }
+    &_text{
+      h1{
+        font-family: museo500;
+        color: white;
+        margin-bottom: 0px;
+      }
+      p{
+        font-family: maven;
+        color: white;
+        margin-top: 10px;
+      }
+    }
+  }
+}
