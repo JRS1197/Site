@@ -225,6 +225,45 @@
   color: red;
 }
 
+.speakers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border: solid red;
+}
+.speakers__grid-fiche {
+  border: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.speakers__grid-fiche picture {
+  border: 3px solid #F88;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.speakers__grid-fiche picture::after {
+  content: "";
+  width: 50rem;
+  height: 10rem;
+  position: absolute;
+  inset-inline: auto 0;
+  inset-block: auto -9.5rem;
+  background-image: url(/dist/image/elements/pattern_stripes.png);
+  background-repeat: repeat-x;
+  background-size: 2rem 1rem;
+}
+.speakers__grid-fiche picture img {
+  width: 100%;
+}
+
 *,
 *::before,
 *::after {

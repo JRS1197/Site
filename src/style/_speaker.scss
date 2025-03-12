@@ -1,0 +1,34 @@
+.speakers {
+
+  &__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border: solid red;
+
+  }
+  &__grid-fiche {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    picture {
+      border: 3px solid #F88;
+      display: flex;
+      position: relative;
+      width: 100%;
+      &::after {
+        content: "";
+        width: 50rem;
+        height: 10rem;
+        position: absolute;
+        inset-inline: auto 0;
+        inset-block: auto -9.5rem;
+        background-image: url(/dist/image/elements/pattern_stripes.png);
+        background-repeat: repeat-x;
+        background-size: 2rem 1rem;
+      }
+      img {
+        width: 100%;
+      }
+  }
+}}
