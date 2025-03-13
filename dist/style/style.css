@@ -1,3 +1,38 @@
+h1, h2, h4 {
+  font-family: museo500;
+}
+
+h3 {
+  font-family: museo300;
+}
+
+p {
+  font-family: maven;
+}
+
+form {
+  font-family: maven;
+}
+
+button {
+  font-family: spartan;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 50px;
+  color: orangered;
+  border: solid orangered 1.5px;
+  background-color: transparent;
+}
+button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 @font-face {
   font-family: "spartan";
   src: url(../fonts/LeagueSpartanVariable.woff2);
@@ -115,6 +150,7 @@
 }
 
 .hero {
+  margin: 0;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgb(106, 0, 212)), color-stop(50%, rgb(161, 65, 255)), to(rgb(106, 0, 212)));
   background: linear-gradient(90deg, rgb(106, 0, 212) 0%, rgb(161, 65, 255) 50%, rgb(106, 0, 212) 100%);
@@ -128,11 +164,11 @@
           justify-content: space-between;
 }
 .hero__pattern_right {
-  margin-top: -18px;
+  margin-top: -14px;
   width: 20%;
 }
 .hero__pattern_left {
-  margin-top: -18px;
+  margin-top: -14px;
   width: 10%;
 }
 .hero__presentation {
@@ -148,8 +184,21 @@
           align-items: center;
 }
 .hero__presentation_img {
-  margin-top: -70px;
-  height: 200px;
+  margin-top: -110px;
+  height: 300px;
+  width: auto;
+}
+.hero__presentation_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .hero__presentation_text h1 {
   font-family: museo500;
@@ -172,10 +221,6 @@
 .header ul {
   list-style: none;
   padding: 0;
-}
-.header a {
-  text-decoration: none;
-  color: #000;
 }
 .header__logo h1 {
   font-size: 0;
@@ -225,14 +270,44 @@
   color: red;
 }
 
+.speakers {
+  padding: 2rem;
+  background-color: rgb(248, 248, 248);
+}
+.speakers__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.speakers__title p {
+  margin-top: 1rem;
+  font-family: museo300;
+  color: rgb(27, 27, 27);
+}
+.speakers__title p::before {
+  height: 1rem;
+  border-left: 1px solid #000;
+  content: "";
+  margin: 0 0.5rem;
+  color: rgb(0, 0, 0);
+}
+.speakers__title a {
+  color: rgb(255, 55, 0);
+  margin: 0;
+}
 .speakers__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  border: solid red;
+  gap: 25px;
 }
 .speakers__grid-fiche {
-  border: solid;
+  min-height: 370px;
+  min-width: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,28 +315,131 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 1fr;
 }
 .speakers__grid-fiche picture {
-  border: 3px solid #F88;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 100%;
+  height: 75%;
+}
+.speakers__grid-fiche picture::before {
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(-45deg, rgba(0, 195, 255, 0.641) 0%, rgba(25, 0, 255, 0.243) 100%);
 }
 .speakers__grid-fiche picture::after {
   content: "";
-  width: 50rem;
-  height: 10rem;
+  z-index: 2;
+  width: 60%;
+  height: 13%;
   position: absolute;
   inset-inline: auto 0;
-  inset-block: auto -9.5rem;
+  inset-block: auto -6.5%;
   background-image: url(/dist/image/elements/pattern_stripes.png);
-  background-repeat: repeat-x;
-  background-size: 2rem 1rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .speakers__grid-fiche picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+}
+.speakers__front {
+  height: 100%;
+}
+.speakers__front--hidden {
+  content-visibility: hidden;
+  position: absolute;
+}
+.speakers__front--infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 25%;
+  padding: 0 1rem 0 1rem;
+}
+.speakers__front--infos h2 {
+  font-family: museo300;
+  color: rgb(72, 28, 194);
+  margin-top: 1rem;
+  margin-bottom: 2px;
+}
+.speakers__front--infos p {
+  margin-top: 0;
+  color: rgb(159, 159, 159);
+}
+.speakers__back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1rem 1.5rem 1rem;
+  background-color: rgb(255, 230, 212);
+  height: 100%;
+}
+.speakers__back--hidden {
+  content-visibility: hidden;
+  position: absolute;
+}
+.speakers__back h2 {
+  margin-top: 0;
+  color: rgb(72, 28, 194);
+}
+.speakers__back h3 {
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+.speakers__back p {
+  margin-top: 0;
+  color: rgb(129, 129, 129);
+}
+.speakers__back--practical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.speakers__back--practical div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.7rem;
+}
+.speakers__back--practical p {
+  margin: 0;
+  color: black;
+}
+.speakers__back--practical button {
+  margin: 0;
+}
+.speakers__back--practical a {
+  height: 1rem;
+  content: "";
+  border-left: solid 1px;
+  margin-top: 0.1rem;
 }
 
 *,

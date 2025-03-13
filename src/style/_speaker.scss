@@ -1,34 +1,144 @@
 .speakers {
-
+  padding: 2rem;
+  background-color: rgb(248, 248, 248);
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
+    p{
+      margin-top: 1rem;
+      font-family: museo300;
+      color: rgb(27, 27, 27);
+    }
+    p::before{
+      height: 1rem;
+      border-left: 1px solid #000;
+      content: "";
+      margin: 0 .5rem;
+      color: rgb(0, 0, 0);
+      }
+    a{
+      color: rgb(255, 55, 0);
+      margin: 0;
+    }
+  }
   &__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  border: solid red;
-
+  gap: 25px;
   }
   &__grid-fiche {
-    border: solid;
+    min-height: 370px;
+    min-width: 260px;
     display: flex;
     flex-direction: column;
+    width: 1fr;
     picture {
-      border: 3px solid #F88;
       display: flex;
       position: relative;
       width: 100%;
+      height: 75%;
+      &::before {
+        content: '';
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background: linear-gradient(-45deg, rgba(0, 195, 255, 0.641) 0%, rgba(25, 0, 255, 0.243) 100%);
+        //opacity: 40%;
+      }
       &::after {
         content: "";
-        width: 50rem;
-        height: 10rem;
+        z-index: 2;
+        width: 60%;
+        height: 13%;
         position: absolute;
         inset-inline: auto 0;
-        inset-block: auto -9.5rem;
+        inset-block: auto -6.5%;
         background-image: url(/dist/image/elements/pattern_stripes.png);
-        background-repeat: repeat-x;
-        background-size: 2rem 1rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
       }
       img {
+        object-fit: cover;
         width: 100%;
+     
+
       }
   }
-}}
+}
+
+  &__front{
+    height: 100%;
+    &--hidden{
+      content-visibility: hidden;
+      position: absolute;
+    }
+    &--infos{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 25%;
+      padding: 0 1rem 0 1rem;
+      h2 {
+        font-family: museo300;
+        color: rgb(72, 28, 194);
+        margin-top: 1rem;
+        margin-bottom: 2px;
+      }
+      p {
+        margin-top: 0;
+        color: rgb(159, 159, 159);
+      }
+    }
+  }
+  &__back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 1.5rem 1rem;
+    background-color: rgb(255, 230, 212);
+    height: 100%;
+    &--hidden{
+      content-visibility: hidden;
+      position: absolute;
+    }
+    h2 {
+      margin-top: 0;
+      color: rgb(72, 28, 194);
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+    p {
+      margin-top: 0;
+      color: rgb(129, 129, 129);
+    }
+    &--practical{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      div{
+        display: flex;
+        gap: .7rem;
+      }
+      p{
+        margin: 0;
+        color: black;
+      }
+      button{
+        margin: 0;
+      }
+      a{
+        height: 1rem;
+        content: "";
+        border-left: solid 1px;
+        margin-top: .1rem;
+      }
+    }
+  }
+
+}

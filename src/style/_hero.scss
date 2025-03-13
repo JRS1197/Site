@@ -1,4 +1,5 @@
 .hero {
+margin: 0;
 width: 100%;
 background: linear-gradient(90deg, rgba(106,0,212,1) 0%, rgba(161,65,255,1) 50%, rgba(106,0,212,1) 100%);
 //border: solid;
@@ -6,12 +7,12 @@ background: linear-gradient(90deg, rgba(106,0,212,1) 0%, rgba(161,65,255,1) 50%,
     display: flex;
     justify-content: space-between;
     &_right{
-      margin-top: -18px;
+      margin-top: -14px;
       //border: solid red;
       width: 20%;
     }
     &_left{
-      margin-top: -18px;
+      margin-top: -14px;
       //border: solid green;
       width: 10%;
     }
@@ -22,10 +23,14 @@ background: linear-gradient(90deg, rgba(106,0,212,1) 0%, rgba(161,65,255,1) 50%,
     justify-content: center;
     align-items: center;
     &_img{
-      margin-top: -70px;
-      height: 200px;
+      margin-top: -110px;
+      height: 300px;
+      width: auto;
     }
     &_text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       h1{
         font-family: museo500;
         color: white;

@@ -1,0 +1,34 @@
+h1,h2,h4 {
+  font-family: museo500;
+}
+
+h3 {
+  font-family: museo300;
+}
+
+p {
+  font-family: maven;
+}
+
+form {
+  font-family: maven;
+}
+
+button {
+  font-family: spartan;
+  text-transform: uppercase;
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 50px;
+  color: orangered;
+  border: solid orangered 1.5px;
+  background-color: transparent;
+  &:hover{
+    background-color: orangered;
+    color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
