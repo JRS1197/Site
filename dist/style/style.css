@@ -1,9 +1,17 @@
+@charset "UTF-8";
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 h1, h2, h4 {
   font-family: museo500;
+  margin: 0;
 }
 
 h3 {
   font-family: museo300;
+  margin: 0;
 }
 
 p {
@@ -218,10 +226,6 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
-.header ul {
-  list-style: none;
-  padding: 0;
-}
 .header__logo h1 {
   font-size: 0;
 }
@@ -268,6 +272,64 @@ a {
 }
 .header__navbar-search {
   color: red;
+}
+
+.price {
+  margin-top: 6rem;
+  justify-items: center;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4rem 2rem 2rem 2rem;
+  margin-top: -2rem;
+  background-color: rgb(58, 58, 58);
+}
+.footer ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__center div {
+  width: 50%;
+  padding-right: 1.1rem;
+}
+.footer__center picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+}
+.footer__center picture img {
+  width: 100%;
+}
+.footer__infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .speakers {
@@ -440,6 +502,136 @@ a {
   content: "";
   border-left: solid 1px;
   margin-top: 0.1rem;
+}
+
+.forms {
+  justify-items: center;
+  /* Style général du formulaire */
+  /* Style des champs de texte */
+}
+.forms h1 {
+  font-family: maven;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: blueviolet;
+  margin-top: 4rem;
+  text-align: center;
+}
+.forms h2 {
+  margin-bottom: 0.7rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.forms h3 {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: lighter;
+}
+.forms__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.forms .forms__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.forms .forms__form-name,
+.forms .forms__form-mail,
+.forms .forms__form-subject,
+.forms .forms__form-keywords {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.forms .forms__form-details {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.8rem;
+}
+.forms .required {
+  color: #7d5bbe;
+  font-size: 16px;
+  margin-left: 2px;
+}
+.forms .small-text {
+  font-size: 12px;
+  color: #999;
+}
+.forms input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #bfbfbf;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+.forms label {
+  font-family: maven;
+  margin-bottom: -1.9rem;
+  margin-left: 0.5rem;
+}
+.forms textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bfbfbf;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+.forms input:focus {
+  border-bottom-color: #7d5bbe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.forms textarea:focus {
+  border-color: #7d5bbe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.forms textarea {
+  resize: vertical;
+}
+.forms .forms__form-name:has(input:focus) label,
+.forms .forms__form-mail:has(input:focus) label,
+.forms .forms__form-subject:has(input:focus) label,
+.forms .forms__form-keywords:has(input:focus) label {
+  opacity: 0%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.forms .forms__form-details:has(textarea:focus) label {
+  opacity: 0%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.forms button {
+  margin-top: 2rem;
+  scale: 130%;
 }
 
 *,

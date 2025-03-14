@@ -1,0 +1,122 @@
+.forms{
+  justify-items: center;
+  h1{
+    font-family: maven;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: blueviolet;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  h2{
+    margin-bottom: .7rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  h3{
+    width: 60%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* Style général du formulaire */
+.forms__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style des champs de texte */
+.forms__form-name,
+.forms__form-mail,
+.forms__form-subject,
+.forms__form-keywords {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.forms__form-details {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: .8rem;
+}
+
+.required {
+  color: #7d5bbe;
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #999;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #bfbfbf;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+label{
+  font-family: maven;
+  margin-bottom: -1.9rem;
+  margin-left: .5rem;
+  }
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bfbfbf;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  //margin-top: .7rem;
+}
+
+input:focus {
+  border-bottom-color: #7d5bbe;
+  box-shadow: none;
+}
+
+textarea:focus {
+  border-color: #7d5bbe;
+  box-shadow: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.forms__form-name:has(input:focus) label,
+.forms__form-mail:has(input:focus) label,
+.forms__form-subject:has(input:focus) label,
+.forms__form-keywords:has(input:focus) label {
+  opacity: 0%;
+  transition: .1s;
+}
+.forms__form-details:has(textarea:focus) label{
+  opacity: 0%;
+  transition: .1s;
+}
+
+button{
+  margin-top: 2rem;
+  scale: 130%;
+}
+}

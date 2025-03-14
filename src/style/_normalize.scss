@@ -1,13 +1,21 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 h1,h2,h4 {
   font-family: museo500;
+  margin: 0;
 }
 
 h3 {
   font-family: museo300;
+  margin: 0;
 }
 
 p {
   font-family: maven;
+  //margin: 0;
 }
 
 form {

@@ -61,7 +61,7 @@
 
 <section class="speakers">
   <div class="speakers__title"><a href="" class="icon-home"></a><p>Speakers</p></div>
-  <section class="speakers__grid">
+  <div class="speakers__grid">
 
     <div class="speakers__grid-fiche">
       <div class="speakers__front">
@@ -367,78 +367,89 @@
    
 
 <section class="forms">
-  <h1>Become speaker</h1>
-  <h2>Do you have a topic that you like?</h2>
-  <p>Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</p>
+  <div class="forms__text">
+    <h1>Become speaker</h1>
+    <h2>Do you have a topic that you like?</h2>
+    <h3>Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</h3>
+  </div>
   <form class="forms__form">
     <div class="forms__form-name">
         <label for="name">Name<span class="required">*</span></label>
-        <input type="text" id="name" name="name" required>
+        <input placeholder="" type="text" id="name" name="name" required>
     </div>
 
     <div class="forms__form-mail">
         <label for="email">Mail<span class="required">*</span></label>
-        <input type="email" id="email" name="email" required>
+        <input placeholder="" type="email" id="email" name="email" required>
     </div>
 
     <div class="forms__form-subject">
         <label for="subject">Your Subject<span class="required">*</span></label>
-        <input type="text" id="subject" name="subject" required>
+        <input placeholder="" type="text" id="subject" name="subject" required>
     </div>
 
     <div class="forms__form-keywords">
         <label for="keywords">Keywords<span class="required">*</span> <span class="small-text">[separate by comma]</span></label>
-        <input type="text" id="keywords" name="keywords" required>
+        <input placeholder="" type="text" id="keywords" name="keywords" required>
     </div>
 
     <div class="forms__form-details">
         <label for="details">Short details<span class="required">*</span></label>
-        <textarea id="details" name="details" rows="4" required></textarea>
+        <textarea placeholder="" id="details" name="details" rows="4" required></textarea>
     </div>
-    <button class="forms__form-button" type="submit">Send your subject</button>
-</form>
-<h2>or just participate to the present event ...</h2>
-<div class="forms__ticket">
-  <button class="forms__ticket-button">
-      get ticket
-      <img src="paypal-icon.png" alt="PayPal">
-      <i class="fas fa-credit-card"></i>
-  </button>
-  <div class="forms__ticket-price">$199 USD</div>
+  </form>
+  <button class="forms__form-button" type="submit">Send your subject</button>
+<h2>or just participate <br> to the present event ...</h2>
 </div>
 
 </section>
 </main>
 
+<div class="price">
+  <div class="price__ticket">
+    <button class="price__ticket-button">
+        get ticket
+        <img src="paypal-icon.png" alt="PayPal">
+        <i class="fas fa-credit-card"></i>
+    </button>
+    <div class="price__ticket-price">$199 USD</div>
+</div>
+
 <footer class="footer">
   <div class="footer__center">
-    <h2>The Las Vegas Convention Center</h2>
-    <h4>3150 Paradise Rd, Las Vegas, NV 89109</h4>
-    <p>he Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
+    <div>
+      <h2>The Las Vegas Convention Center</h2>
+      <h4>3150 Paradise Rd, Las Vegas, NV 89109</h4>
+      <p>he Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
+    </div>
+    <picture>
+    <img src="image/page-picture/lasvegas_conventioncenter.png" alt="" class="footer__img">
+    </picture>
   </div>
-  <img src="image/page-picture/lasvegas_conventioncenter.png" alt="" class="footer__img">
-  <div class="footer__logos">
-    <img src="image/logos/cisco.svg" alt="" class="footer__logos-1">
-    <img src="image/logos/amazon_s3.svg" alt="" class="footer__logos-2">
-    <img src="image/logos/nick.svg" alt="" class="footer__logos-3">
-    <img src="image/logos/meetup.svg" alt="" class="footer__logos-4">
-    <img src="image/logos/stripe.svg" alt="" class="footer__logos-5">
-    <img src="image/logos/mailchimp.svg" alt="" class="footer__logos-6">
-  </div>
-  <div class="footer__follow">
-    <h4>Follow us</h4>
-    <div class="footer__follow-slack"><img src="" alt=""><p></p></div>
-    <div class="footer__follow-twitter"><img src="" alt=""><p></p></div>
-  </div>
-  <div class="footer__call">
-    <span>Helpdesk Call-center</span>
-    <span>+1 702-892-0711</span>
-    <span>(speaker’s support)</span>
-  </div>
-  <div class="footer__copyright">
-    <span>Organised by</span>
-    <span>WebeesMeetups.com</span>
-    <span>(speaker’s support)</span>
+  <ul class="footer__logos">
+    <li><img src="image/logos/cisco.svg" alt="" class="footer__logos__1"></li>
+    <li><img src="image/logos/amazon_s3.svg" alt="" class="footer__logos__2"></li>
+    <li><img src="image/logos/nick.svg" alt="" class="footer__logos__3"></li>
+    <li><img src="image/logos/meetup.svg" alt="" class="footer__logos__4"></li>
+    <li><img src="image/logos/stripe.svg" alt="" class="footer__logos__5"></li>
+    <li><img src="image/logos/mailchimp.svg" alt="" class="footer__logos__6"></li>
+  </ul>
+  <div class="footer__infos">
+    <div class="footer__infos--follow">
+      <h4>Follow us</h4>
+      <div class="footer__infos--follow-slack"><img src="" alt=""><p></p></div>
+      <div class="footer__infos--follow-twitter"><img src="" alt=""><p></p></div>
+    </div>
+    <div class="footer__infos--call">
+      <span>Helpdesk Call-center</span>
+      <span>+1 702-892-0711</span>
+      <span>(speaker’s support)</span>
+    </div>
+    <div class="footer__infos--copyright">
+      <span>Organised by</span>
+      <span>WebeesMeetups.com</span>
+      <span>(speaker’s support)</span>
+    </div>
   </div>
 </footer>
 </body>
